@@ -1,0 +1,31 @@
+# Header
+menu:
+  主页: /
+  归档: /archives
+  捐助: /donate
+  小伙伴: /friends
+  关于: /about
+rss: /atom.xml
+
+
+sitemap:
+    path: sitemap.xml
+
+# Content
+excerpt_link: 阅读全文
+fancybox: true
+
+# Sidebar
+widgets:
+- tag
+
+# Miscellaneous
+google_analytics: 
+favicon: /favicon.ico
+twitter: kawaiiushio
+google_plus: u/0/112705918015792136321
+fb_admins:
+fb_app_id:
+github: kawaiiushio
+weibo: 319880777
+email: h@ippotsuko.com

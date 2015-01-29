@@ -1,0 +1,351 @@
+#header
+  background-color: #3fb0e7
+  color: #333
+  display: table
+  height: 100%
+  text-align: center
+  width: 100%
+  transition: height 0.25s
+  position: relative
+  overflow: hidden
+  &:before, &:after
+    content: ""
+    position: absolute
+    left: 0
+    right: 0
+    height: 40px
+  &:before
+    top: 0
+  &:after
+    bottom: 0
+  &.small
+    height:10%
+    background-color: #fff
+    #header-outer
+      display:none
+    #header-inner
+      border-bottom: 1px solid #ddd
+      &.active
+        border-bottom: 1px solid rgb(63, 176, 231)
+      .title
+        opacity: 1
+
+#header-inner
+  position: fixed
+  text-align: center
+  width: 100%
+  height: 50px
+  background:#fff
+  transition: opacity 0.25s
+  z-index: 99999
+  top: 0
+  .title
+    font-weight: bold
+    padding-top:20px
+    opacity: 0
+    @media mq-mobile
+      opacity: 1
+    h1
+      display: none
+      font-size: 1rem
+      line-height: 3rem
+      @media mq-mobile
+        color: #fff
+  &.active
+    border-bottom: 1px solid rgb(63, 176, 231);
+    .title
+      opacity: 1
+
+#header-outer
+  min-height:200px
+  height: 100%
+  position: relative
+
+#banner
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-size: cover
+  z-index: -1
+
+#header-title
+  text-align: center
+  height: logo-size
+  position: absolute
+  top: 50%
+  left: 0
+  margin-top: logo-size * -0.5
+
+$logo-text
+  text-decoration: none
+  color: #fff
+  font-weight: 300
+
+#logo
+  @extend $logo-text
+  font-size: logo-size
+  line-height: logo-size
+  letter-spacing: 2px
+  font-weight: bold;
+
+#subtitle
+  @extend $logo-text
+  font-size: subtitle-size
+  line-height: subtitle-size
+  letter-spacing: 1px
+
+#logo-wrap
+  font-size:1000
+
+#subtitle-wrap
+  margin-top: subtitle-size
+
+#main-nav
+  position: absolute
+  top: 0
+
+.site-nav
+  background: #FFF
+  border-bottom: 1px solid #EEE
+  padding: 0px 1.5rem 0 1.5rem
+  position: fixed
+  top: 48px
+  left: 0
+  width: 100%
+  z-index: 999
+  text-align: left;
+  display:none
+  &.nav-on
+    display:block
+  ul
+    list-style: none
+    padding: .5rem 0
+    margin: 0
+    li
+      padding: .5rem 0
+      align: left
+      a
+        color: #999
+        text-decoration: none
+        transition: color 0.3s
+
+$nav-link
+  float: left
+  color: #333
+  opacity: 0.6
+  text-decoration: none
+  transition: opacity 0.2s
+  display: block
+  padding: 20px 15px
+  &:hover
+    opacity: 1
+
+.nav-icon
+  @extend $nav-link
+  font-family: font-icon
+  text-align: center
+  font-size: font-size
+  width: font-size
+  height: font-size
+  padding: 20px 15px
+  position: relative
+  cursor: pointer
+  color: #2E3434
+
+
+.main-nav-link
+  @extend $nav-link
+  font-weight: 300
+  letter-spacing: 1px
+  @media mq-mobile
+    display: none
+
+.nav-toggle
+  font-family: FontAwesome
+  &:before
+    content: "\f0c9"
+
+#main-nav-toggle
+  display: block
+  &:before
+    content: "\f0c9"
+
+#sub-profile
+  position: absolute
+  top: 12px
+  width: 30px
+  height: 30px
+  right: 15px
+  border:1px solid #ddd
+  img
+    width:30px
+    height:30px
+
+#sub-nav
+  position: absolute
+  top: 0
+  right:42px
+
+#rss-wrap
+ width:100px
+ margin: 0 auto
+
+#nav-rss-link
+  font-size:24px
+  &:before
+    content: "\f09e"
+
+#nav-github-link
+  font-size:24px
+  &:before
+    content: "\f09b"
+
+#nav-search-btn
+  &:before
+    content: "\f002"
+
+#search-form-wrap
+  position: absolute
+  top: 15px
+  width: 150px
+  height: 30px
+  right: -150px
+  opacity: 0
+  transition: 0.2s ease-out
+  &.on
+    opacity: 1
+    right: 50px
+  @media mq-mobile
+    width: 80%
+    right: -100%
+
+.search-form
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  background: #fff
+  padding: 5px 15px
+  border-radius: 15px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+
+.search-form-input
+  border: none
+  background: none
+  color: color-default
+  width: 100%
+  font: 13px font-sans
+  outline: none
+  &::-webkit-search-results-decoration
+  &::-webkit-search-cancel-button
+    -webkit-appearance: none
+
+.search-form-submit
+  position: absolute
+  top: 50%
+  right: 10px
+  margin-top: -7px
+  font: 13px font-icon
+  border: none
+  background: none
+  color: #bbb
+  cursor: pointer
+  &:hover, &:focus
+    color: #777
+
+.mountains
+  position: absolute
+  bottom: -120px
+  right: 0px
+  @media mq-mobile
+    display: none
+
+$cloud
+  background-image: url("/css/images/cloud.png")
+  background-size: cover
+  position: absolute
+
+$sun
+  background-image: url("/css/images/sun.png")
+  background-size: cover
+  position: absolute
+  animation: 10s sun infinite linear
+
+#cloud-1
+  @extend $cloud
+  width:80px
+  height:70px
+  bottom:300px
+  right:-200px
+  animation: 10s cloud-right infinite linear
+
+#cloud-2
+  @extend $cloud
+  width:80px
+  height:70px
+  bottom:200px
+  right:-200px
+  animation: 5s cloud-right infinite linear
+
+#cloud-3
+  @extend $cloud
+  width:80px
+  height:70px
+  bottom:400px
+  left:-200px
+  animation: 10s cloud-left infinite linear
+
+#cloud-4
+  @extend $cloud
+  width:80px
+  height:80px
+  bottom:100px
+  animation: 5s cloud-middle infinite ease-in-out alternate
+
+.cloud
+  @media mq-mobile
+    display:none
+
+#sun
+  @extend $sun
+  width:80px
+  height:80px
+  top: 10px
+  left: 50px
+  z-index: 100000
+
+@keyframes cloud-middle
+  from{
+    right: 200px
+  }
+  to {
+    right: 800px
+  }
+
+@keyframes cloud-left
+  from{
+    opacity: 0
+    left: -100px
+  }
+  to {
+    opacity: 1
+    left: 1800px
+  }
+
+@keyframes cloud-right
+  from{
+    opacity: 0
+    right: -100px
+  }
+  to {
+    opacity: 1
+    right: 1800px
+  }
+
+$keyframe-name-2 = sun
+@keyframes {$keyframe-name-2}
+  to {
+    transform: rotate(1turn);
+  }
