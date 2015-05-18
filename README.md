@@ -4,7 +4,7 @@ A brand new default theme for [Hexo].
 
 - Based On [landscape](http://hexo.io/hexo-theme-landscape/)
 
-- Demo http://ippotsuko.com
+- Demo http://akarin.xyz
 
 ## Installation
 
