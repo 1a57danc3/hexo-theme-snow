@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>User-Agent</title>
+</head>
+<body>
+  <h1>Your User Agent is:</h1>
+<?php
+echo $_SERVER['HTTP_USER_AGENT'];
+?>
+<h1>Your IP is:</h1>
+<?php global $_SERVER; if (getenv('HTTP_CLIENT_IP')) { $ip = getenv('HTTP_CLIENT_IP'); } else if (getenv('HTTP_X_FORWARDED_FOR')) { $ip = getenv('HTTP_X_FORWARDED_FOR'); } else if (getenv('REMOTE_ADDR')) { $ip = getenv('REMOTE_ADDR'); } else { $ip = $_SERVER['REMOTE_ADDR']; } echo $ip;?>
+<h1>Your Operation System is:</h1>
+<?php function getSystem(){ $sys = $_SERVER['HTTP_USER_AGENT']; if(stripos($sys, "NT 6.3")) $os = "Windows Blue"; elseif(stripos($sys, "NT 6.2")) $os = "Windows 8"; elseif(stripos($sys, "NT 6.1")) $os = "Windows 7"; elseif(stripos($sys, "NT 6.0")) $os = "Windows Vista"; elseif(stripos($sys, "NT 5.1")) $os = "Windows XP"; elseif(stripos($sys, "NT 5.2")) $os = "Windows Server 2003"; elseif(stripos($sys, "NT 5")) $os = "Windows 2000"; elseif(stripos($sys, "NT 4.9")) $os = "Windows ME"; elseif(stripos($sys, "NT 4")) $os = "Windows NT 4.0"; elseif(stripos($sys, "98")) $os = "Windows 98"; elseif(stripos($sys, "95")) $os = "Windows 95"; elseif(stripos($sys, "Mac")) $os = "Mac"; elseif(stripos($sys, "Linux")) $os = "Linux"; elseif(stripos($sys, "Unix")) $os = "Unix"; elseif(stripos($sys, "FreeBSD")) $os = "FreeBSD"; elseif(stripos($sys, "SunOS")) $os = "SunOS"; elseif(stripos($sys, "BeOS")) $os = "BeOS"; elseif(stripos($sys, "OS/2")) $os = "OS/2"; elseif(stripos($sys, "PC")) $os = "Macintosh"; elseif(stripos($sys, "AIX")) $os = "AIX"; else $os = "Unknown Operation Sytem"; if(stripos($sys, "WOW64")) $os.=" 64 Bit"; elseif(stripos($sys, "x86_64")) $os.=" 64 Bit"; elseif(stripos($sys, "i686 i386")) $os.=" 32 Bit";return $os; } echo getSystem() ?>
+
+  <br>
+  <br>
+  <br>Powered By huhuhuzro  (CC) BY-NC-SA
+  </body>
+</html>

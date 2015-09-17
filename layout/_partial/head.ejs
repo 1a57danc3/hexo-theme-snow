@@ -5,7 +5,7 @@
   <%
   var title = page.title;
   if (is_archive()){
-    title = 'Archives';
+    title = '過往';
 
     if (is_month()){
       title += ': ' + page.year + '/' + page.month;
@@ -20,18 +20,17 @@
 
   }
   %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <title>彳亍</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
   <% if (theme.rss){ %>
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
-  <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="theme-color" content="#ffffff">
-  <% } %>
+    <meta name="google" content="notranslate">
   <%- css('css/style') %>
-  <%- partial('google-analytics') %>
   <style type="text/css">
-html {background-color: white}</style>
-</head>
+  html{ background-color: white}
+  </style>
+  </head>

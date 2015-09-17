@@ -1,29 +1,27 @@
-# Snow
+# Landscape
 
 A brand new default theme for [Hexo].
 
-- Based On [landscape](http://hexo.io/hexo-theme-landscape/)
-
-- Demo http://akarin.xyz
+- [Preview](http://hexo.io/hexo-theme-landscape/)
 
 ## Installation
 
 ### Install
 
 ``` bash
-$ git clone https://github.com/kawaiiushio/hexo-theme-snow.git themes/snow
+$ git clone https://github.com/hexojs/hexo-theme-landscape.git themes/landscape
 ```
 
-**snow requires Hexo 2.4 and above.**
+**Landscape requires Hexo 2.4 and above.**
 
 ### Enable
 
-Modify `theme` setting in `_config.yml` to `snow`.
+Modify `theme` setting in `_config.yml` to `landscape`.
 
 ### Update
 
 ``` bash
-cd themes/snow
+cd themes/landscape
 git pull
 ```
 
@@ -71,7 +69,7 @@ google_plus:
 
 ### Fancybox
 
-snow uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
+Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
 
 ```
 ![img caption](img url)
@@ -83,7 +81,7 @@ snow uses [Fancybox] to showcase your photos. You can use Markdown syntax or fan
 
 You can put your sidebar in left side, right side or bottom of your site by editing `sidebar` setting.
 
-snow provides 5 built-in widgets:
+Landscape provides 5 built-in widgets:
 
 - category
 - tag
@@ -111,6 +109,3 @@ All of them are enabled by default. You can edit them in `widget` setting.
 [Fancybox]: http://fancyapps.com/fancybox/
 [Font Awesome]: http://fontawesome.io/
 [Grunt]: http://gruntjs.com/
-
-
-THX Author：[Yunlzheng](http://yunlzheng.github.io)

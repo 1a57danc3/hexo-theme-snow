@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User-Agent</title>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+  <script src='./useragents.js' type='text/javascript'></script>
+</head>
+
+<body>
+<script>
+	//alert(navigator.userAgent);
+	Browsers = new UserAgents(navigator.userAgent);
+	var txt = "browserName: " + (Browsers.browser.name ? Browsers.browser.name : '') + '<br />' +
+			  "browserChannel: " + (Browsers.browser.channel ? Browsers.browser.channel : '') + '<br />' +
+			  "browserVersion: " + (Browsers.browser.version ? Browsers.browser.version.toString() : '') + '<br />' +
+			  "browserVersionType: " + (Browsers.browser.version ? Browsers.browser.version.type : '') + '<br />' +
+			  "browserVersionMajor: " + (Browsers.browser.version ? Browsers.browser.version.major : '') + '<br />' +
+			  "browserVersionMinor: " + (Browsers.browser.version ? Browsers.browser.version.minor : '') + '<br />' +
+			  "browserVersionOriginal: " + (Browsers.browser.version ? Browsers.browser.version.original : '') + '<br />' +
+			  "browserMode: " + (Browsers.browser.mode ? Browsers.browser.mode : '') + '<br />' +
+			  "engineName: " + (Browsers.engine.name ? Browsers.engine.name : '') + '<br />' +
+			  "engineVersion: " + (Browsers.engine.version ? Browsers.engine.version.toString() : '') + '<br />' +
+			  "osName: " + (Browsers.os.name ? Browsers.os.name : '') + '<br />' +
+			  "osVersion: " + (Browsers.os.version ? Browsers.os.version.toString() : '') + '<br />' +
+			  "deviceManufacturer: " + (Browsers.device.manufacturer ? Browsers.device.manufacturer : '') + '<br />' +
+			  "deviceModel: " + (Browsers.device.model ? Browsers.device.model : '') + '<br />' +
+			  "deviceType: " + (Browsers.device.type ? Browsers.device.type : '') + '<br />' +
+			  "useragent: " + navigator.userAgent + '<br />' +
+			  "humanReadable: " + Browsers.toString();
+	//alert(txt);
+	window.document.write(txt);
+</script>
+
+<br><br><br><br>
+<a href="http://rovertang.com/blog/archives/555">Read More ... </a><br>
+Powered  by <a href="http://www.html5test.com">html5test</a><br>
+Modified by
+<a href="http://rovertang.com">RoverTang</a><br>
+
+
+</body>
+</html>

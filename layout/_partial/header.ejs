@@ -1,12 +1,7 @@
-<% if (path=='') {%>
-  <header id="header">
-<%} else{%>
-  <header id="header" class="small">
-<%} %>
+<header id="header">
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="<%- url_for() %>" id="logo"><%= config.title %></a>
       </h1>
       <% if (theme.subtitle){ %>
         <h2 id="subtitle-wrap">
@@ -18,13 +13,13 @@
         <a id="nav-rss-link" class="nav-icon" href="<%- theme.rss %>" title="RSS Feed"></a>
       <% } %>
       <% if (theme.github) {%>
-        <a id="nav-github-link" class="nav-icon" href="https://github.com/<%- theme.github %>" title="Github" target="_blank"></a>
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/<%- theme.github %>" title="Github Home" target="_blank"></a>
       <% } %>
       </div>
     </div>
   </div>
   <div id="header-inner" class="">
-    <a class="title"><h1><%= config.title %></h1></a>
+    <a class="title"></a>
     <nav id="main-nav">
       <a id="main-nav-toggle" class="nav-icon"></a>
     </nav>
@@ -33,6 +28,8 @@
     </nav>
     <div id="search-form-wrap">
       <%- search_form({button: '&#xF002;'}) %>
+    </div>
+    <div id="sub-profile">
     </div>
   </div>
   <div class="site-nav">
